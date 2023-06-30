@@ -384,26 +384,12 @@ class TypeParameterResolverTest {
   void testReturnParam_WildcardWithUpperBounds() throws Exception {
     class Key {
     }
+    @Getter
+    @Setter
     @SuppressWarnings("unused")
     class KeyBean<S extends Key & Cloneable, T extends Key> {
       private S key1;
       private T key2;
-
-      public S getKey1() {
-        return key1;
-      }
-
-      public void setKey1(S key1) {
-        this.key1 = key1;
-      }
-
-      public T getKey2() {
-        return key2;
-      }
-
-      public void setKey2(T key2) {
-        this.key2 = key2;
-      }
     }
     Class<?> clazz = KeyBean.class;
     Method getter1 = clazz.getMethod("getKey1");

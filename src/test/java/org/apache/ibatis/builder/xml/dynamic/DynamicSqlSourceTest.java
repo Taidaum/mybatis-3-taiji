@@ -361,20 +361,11 @@ class DynamicSqlSourceTest extends BaseDataTest {
     Assertions.assertEquals("id=", sql);
   }
 
+  @AllArgsConstructor
+  @Getter
+  @Setter
   public static class Bean {
     public String id;
-
-    Bean(String property) {
-      this.id = property;
-    }
-
-    public String getId() {
-      return id;
-    }
-
-    public void setId(String property) {
-      this.id = property;
-    }
   }
 
 }

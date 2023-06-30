@@ -38,19 +38,13 @@ public class SupportClasses {
     }
   }
 
+  @Getter
+  @Setter
   public static class CustomCache extends PerpetualCache {
     private String name;
 
     public CustomCache(String id) {
       super(id);
-    }
-
-    public String getName() {
-      return name;
-    }
-
-    public void setName(String name) {
-      this.name = name;
     }
   }
 
